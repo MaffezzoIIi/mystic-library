@@ -21,8 +21,8 @@ const Login: React.FC = () => {
           </h2>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          <input type="hidden" name="remember" value="true" />
-          <div className="rounded-md shadow-sm -space-y-px">
+          {/* <input type="hidden" name="remember" value="true" /> */}
+          <div className="rounded-md shadow-sm ">
             <div>
               <label htmlFor="email-address" className="sr-only">
                 Endereço de Email
@@ -35,11 +35,11 @@ const Login: React.FC = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Endereço de Email"
               />
             </div>
-            <div>
+            <div className="mt-4">
               <label htmlFor="password" className="sr-only">
                 Senha
               </label>
@@ -51,7 +51,7 @@ const Login: React.FC = () => {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Senha"
               />
             </div>
@@ -70,11 +70,11 @@ const Login: React.FC = () => {
               </label>
             </div>
 
-            <div className="text-sm">
+            {/* <div className="text-sm">
               <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
                 Esqueceu sua senha?
               </a>
-            </div>
+            </div> */}
           </div>
 
           <div>
@@ -97,13 +97,20 @@ const Login: React.FC = () => {
                   />
                   <path
                     fillRule="evenodd"
-                    d="M4 8V6a4 4 0 014-4h4a4 4 0 014 4v2h1a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2h1zm7-2a1 1 0 10-2 0v2h2V6zm-4 0a1 1 0 112 0v2H7V6z"
+                    d="M4 8V6a4 4 0 014-4h4a4 4 0 014 4v2h1a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2h1zm7-2a1 1 0 10-2 0v2h2V6zm-4 0a1 1 112 0v2H7V6z"
                     clipRule="evenodd"
                   />
                 </svg>
               </span>
               Entrar
             </button>
+          </div>
+
+          <div className="text-sm text-center">
+            <span className="text-gray-600">Não tem uma conta?</span>
+            <a href="/register" className="font-medium text-indigo-600 hover:text-indigo-500 ml-2">
+              Cadastre-se
+            </a>
           </div>
         </form>
       </div>
